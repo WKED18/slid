@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Image Slideshow</title>
+<style>
+  body {
+    margin: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<img id="slideshow" src="" alt="Random Image">
+<script>
+  const images = [
+    "images/1RF4WevvYcU5cgI7_uhHqdvNhRoFA8o5I.jpg",
+    "images/1lYsdKaCBMGRoSnfQN58SAQ5gncb1rcIA.jpg",
+    "images/1Z2BPyqedmLB0vP_UgcmaiO8sVie2vo-W.jpg",
+    "images/1-SSLkuhtq-jHdDCwShJeSc2IFfdcg1ga.jpg",
+    "images/1-_JHjhrthOOJB4KwolaSAsVjv44XU-CK.jpg",
+    "images/1Mq5C2mT-vPVQh2-C29YCnyZMnEFU7h3G.jpg",
+    "images/1NyXUeiWJ-iX_HIkgjBJ3Rx7QGdnzBpgP.jpg",
+    "images/1Q_d9dZ09EKvV7mP30Ux_BycyS3dz65eJ.jpg",
+    "images/1bIcA-v8wWXj6QUNWnh90dc7oXZeUbZlN.jpg",
+    "images/1bbnpczHEvLJoDDJX-SRSp_ipQsYzncQ1.jpg",
+    "images/1kbKb6HLJ1UR7VPUZWF-Gic6ttydgDuw5.jpg",
+    "images/1kqQPJgDUCxVrLd-DRhycQzQREIDsAn7t.jpg",
+    "images/1sAI-j60NsfSFgLO6Ckl6CBCyPmsPbhfN.jpg",
+    "images/1sEcyzqM-4POdx2CX-AraYkekQXSSrs3m.jpg",
+    "images/1zg_QwX4UAT3mDjh5W7IOHc-pAiSPEryv.jpg",
+    "images/18JypHX7jRuMhcjlJgAhFSEQq_PzkaFfZ.jpg",
+    "images/1wDfPmlShkZ6z7Gdr4PbLVdU5_PjhD04e.jpg",
+    "images/1avbuRI5UeZk5uS6PVNAWugwBHniJ4tKH.jpg",
+    "images/1HthzDLNxfod3cLl2FiK2jsKh44BE-Ulx.jpg",
+    "images/1fA_a9EFbVb4G_wkpsPyefupu9fJ7A8bz.jpg",
+    "images/1XRRroX96vNynP9MCRiy8rab-uGnodwvI.jpg",
+    "images/1xZOESoPxd2xsTzX-4P_79k7lELbSs-cr.jpg",
+    "images/1Bo4f000VGukBp4cj7kxZSDX2xC29fEV-.jpg",
+    "images/1sOaEU3QnS2bQfj-9AwYDgqBqH3TKtKnD.jpg",
+    "images/1TpAJWGE2__SXPLPdKRft3Ke4KRDpejM4.jpg",
+    "images/1ogd8tLe2uZa6qFr2kDFzqS1FRVaOjBvX.jpg",
+    "images/15WRmcLybzR1lvBjTyoLwgCvsmU9bWXX_.jpg",
+    "images/1qcXTcAnk7Zx7bVzoHV-mV-zyZd8R5fbT.jpg",
+    "images/12bjqDNyW0xLFu7mt2nBpiIf8lBQeHqSp.jpg",
+    "images/1Iar4mZUQ7D6Xq2AIkJJtwfq-nO_dqLvK.jpg",
+    "images/1U8sroxP4b3P4rWLRtAbqdhQVuP1u2Kz1.jpg",
+    "images/1WFWeHIBdGbeayKSGqG5aiZWTiZYCpRwj.jpg"
+  ];
+
+  function showRandomImage() {
+    const img = document.getElementById("slideshow");
+    const randomIndex = Math.floor(Math.random() * images.length);
+    img.src = images[randomIndex];
+  }
+
+  showRandomImage(); // initial random image
+  document.getElementById("slideshow").onclick = showRandomImage; // click to change
+  setInterval(showRandomImage, 5000); // auto-change every 5 seconds
+</script>
+</body>
+</html>
